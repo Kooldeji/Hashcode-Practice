@@ -17,11 +17,11 @@ namespace Hashcode___Practice {
             while (currentStep < totalSteps && currentStep!=-1 && allRides.Count>0) {
                 foreach(Car currentCar in allCars) {
                     if (currentCar.IsFreeAt(currentStep)) {
-                        int bestScore = int.MaxValue;
+                        int bestScore = -1;
                         Ride bestRide = null;
                         foreach(Ride ride in allRides) {
                             int score = ride.ScoreRide(currentCar, currentStep);
-                            if(score <= bestScore) {
+                            if(score > bestScore) {
                                 bestScore = score;
                                 bestRide = ride;
                             }

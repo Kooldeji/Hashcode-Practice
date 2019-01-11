@@ -33,7 +33,7 @@ namespace Hashcode___Practice {
             int carArrives = SelfDriving.GetDist(car.Location, StartLocation) + currentStep;
 
             if (carArrives <= EarliestStart) {
-                //score = bonus;
+                score = bonus;
                 rideStart = EarliestStart;
             } else {
                 rideStart = carArrives;
@@ -46,8 +46,8 @@ namespace Hashcode___Practice {
 
             int rideFinish = rideStart + Raw_score;
             if(rideFinish<=LatestFinish && rideFinish <= totalSteps) {
-                //return score;
-                return downTime;
+                return score;
+                //return downTime;
             } else {
                 return 0;
             }
