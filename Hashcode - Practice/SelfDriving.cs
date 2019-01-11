@@ -38,16 +38,6 @@ namespace Hashcode___Practice {
                 currentStep = NextActiveStep(activeSteps);
             }
             return assignedRides;
-
-
-            //return new List<List<int>> {
-            //    new List<int> {
-            //        0
-            //    },
-            //    new List<int> {
-            //        2,1
-            //    }
-            //};
         }
 
         public static int GetDist(Tuple<int, int> start, Tuple<int, int> end) {
@@ -66,7 +56,6 @@ namespace Hashcode___Practice {
         }
 
         static void InsertSorted(List<int> array, int value) {
-            // TEST
             for(int i = 0; i < array.Count; i++) {
                 if (array[i] >= value) {
                     array.Insert(i, value);

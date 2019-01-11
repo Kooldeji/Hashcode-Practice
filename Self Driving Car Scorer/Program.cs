@@ -23,7 +23,7 @@ namespace Self_Driving_Car_Scorer {
                 foreach(string outFilePath in outFiles) {
                     int score = Score(inFilePath, outFilePath);
                     outputScores[outFilePath] = score;
-                    if (score > scoreBoard[inFilePath].Item1) {
+                    if (score >= scoreBoard[inFilePath].Item1) {
                         scoreBoard[inFilePath] = new Tuple<int, string>(score, outFilePath);
                     }
                 }

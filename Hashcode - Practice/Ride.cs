@@ -25,15 +25,13 @@ namespace Hashcode___Practice {
         }
 
         public int ScoreRide(Car car, int currentStep) {
-            // Deduct marks for far points
-            // Duduct marks for having to wait
             
             int score = 0;
             int rideStart;
             int carArrives = SelfDriving.GetDist(car.Location, StartLocation) + currentStep;
 
             if (carArrives <= EarliestStart) {
-                //score = bonus;
+                score = bonus;
                 rideStart = EarliestStart;
             } else {
                 rideStart = carArrives;
