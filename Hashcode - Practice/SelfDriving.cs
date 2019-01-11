@@ -21,7 +21,7 @@ namespace Hashcode___Practice {
                         Ride bestRide = null;
                         foreach(Ride ride in allRides) {
                             int score = ride.ScoreRide(currentCar, currentStep);
-                            if(score < bestScore) {
+                            if(score <= bestScore) {
                                 bestScore = score;
                                 bestRide = ride;
                             }
