@@ -62,7 +62,7 @@ namespace Hashcode___Practice {
 
             //Iterate over lines and split
             int lineNo = 1;
-            int[] fl = new int[0]; //First line
+            int[] fl; //First line
             List<List<int>> rides = new List<List<int>>();
             foreach (string line in lines) {
                 if (lineNo == 1) {
